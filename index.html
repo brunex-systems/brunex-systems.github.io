@@ -438,6 +438,48 @@
   font-size: 1.04rem;
 }
 
+#brunex-site .contact-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+#brunex-site .contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 0.75rem;
+  background: #fff;
+  color: var(--navy-deep);
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#brunex-site .contact-link:hover {
+  background: #eef5f8;
+  transform: translateY(-2px);
+}
+
+#brunex-site .phone-desktop { display: none; }
+
+@media (hover: hover) and (pointer: fine) {
+  #brunex-site .phone-mobile { display: none; }
+  #brunex-site .phone-desktop {
+    display: inline-flex;
+    cursor: default;
+  }
+  #brunex-site .phone-desktop:hover {
+    background: #fff;
+    transform: none;
+  }
+}
+
 #brunex-site .contact-note {
   display: inline-block;
   margin-top: 1.65rem;
@@ -648,6 +690,11 @@
         <p>
           Brunex Systems combines analytical thinking, practical technology, and thoughtful design to create dependable systems that fit the way organizations operate.
         </p>
+        <div class="contact-actions" aria-label="Contact Brunex Systems">
+          <a class="contact-link phone-mobile" href="tel:+12053191450">Call (205) 319-1450</a>
+          <span class="contact-link phone-desktop">Call (205) 319-1450</span>
+          <a class="contact-link" href="mailto:kevin@brunexsystems.com">Email kevin@brunexsystems.com</a>
+        </div>
         <div class="contact-note">Brunex Systems LLC · Analytical Systems | Seamless Interaction</div>
       </div>
     </section>
